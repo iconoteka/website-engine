@@ -1,8 +1,8 @@
 {
-  "name": "iconoteka-site-test",
+  "name": "iconoteka-site",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://kot-lex.github.io/iconoteka-site-test",
+  "homepage": "http://iconoteka.com",
   "dependencies": {
     "fs-extra": "^6.0.1",
     "iconoteka-lib-test": "github:kot-lex/iconoteka-lib-test#0f783fdc9fc49d8b27a5cc2833938a43b4e9e4fa",
@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "REACT_APP_BASE_URL=https://kot-lex.github.io react-scripts build",
+    "build": "REACT_APP_BASE_URL=https://iconoteka.com react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "copyIconoteka": "cpx './node_modules/iconoteka-lib-test/iconoteka/**' ./src/iconoteka/ --clean",

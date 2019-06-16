@@ -11,4 +11,8 @@
   align-items: center;
   height: $topbar-height;
   background-color: #F5F5F7;
+
+  @include mobile {
+    height: 195px;
+  }
 }

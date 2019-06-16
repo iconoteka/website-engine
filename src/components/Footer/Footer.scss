@@ -10,6 +10,10 @@
   font-size: 15px;
   line-height: 26px;
 
+  @include mobile {
+    display: block;
+  }
+
   &__copy {
     p {
       margin: 0;
@@ -25,6 +29,9 @@
       display: block;
       color: #727273;
       text-transform: lowercase;
+    }
+    @include mobile {
+      margin-top: 40px;
     }
   }
 }
