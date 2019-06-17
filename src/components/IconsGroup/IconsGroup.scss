@@ -21,12 +21,34 @@
     line-height: 28px;
     font-weight: normal;
     color: #BCBBBF;
+
+    @include mobile {
+      padding-bottom: 0;
+      &_empty {
+        padding-bottom: 26px;
+      }
+    }
   }
+
+  &__submit_icon {
+    font-size: 20px;
+    margin-top: 26px;
+    color: $gray-darker;
+  }
+
   &__content {
     display: flex;
     flex-wrap: wrap;
     margin-left: -20px;
     margin-right: -20px;
+
+    @include mobile {
+      justify-content: space-around;
+      &::after {
+        content: '';
+        width: 150px;
+      }
+    }
   }
 }
 

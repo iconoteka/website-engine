@@ -5,6 +5,12 @@
   display: flex;
   justify-content: space-between;
 
+  @include mobile {
+    flex-wrap: wrap-reverse;
+    justify-content: left;
+    margin-top: -5px;
+  }
+
   &__search {
     font-size: 46px;
     color: #1A1A1A;
@@ -16,6 +22,11 @@
     background: #F5F5F7;
     height: 67px;
 
+    @include mobile {
+      font-size: 40px;
+      padding-left: 0;
+    }
+
     &::placeholder {
       color: #BCBBBF;
     }
@@ -25,6 +36,10 @@
     &:focus::placeholder {
       color: #D5D4D9;
     }
+  }
+
+  &__search-wrap {
+    margin-top: 9px;
   }
 
   &__style {
@@ -42,10 +57,19 @@
     letter-spacing: 2.2px;
     line-height: 27px;
 
+    @include mobile {
+      min-width: 185px;
+      margin: 0;
+    }
+
     li {
       padding-top: 0;
       padding-bottom: 0;
       padding-left: 15px;
+
+      @include mobile {
+        padding-left: 0;
+      }
     }
   }
   &__control {
@@ -83,7 +107,7 @@
     box-shadow: 0 0 1px 1px rgba(0,0,0,0.04), 0 3px 6px 0 rgba(6,0,0,0.08);
 
     li {
-      padding: 0 5px 0 15px;
+      padding: 0 15px 0 15px;
       margin: 0;
       text-align: left;
       list-style: none;
