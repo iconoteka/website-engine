@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Iconoteka from 'iconoteka-lib-test/iconoteka.json';
+import Iconoteka from 'iconoteka/iconoteka.json';
 
 import isPredicate from './utils/isPredicate';
 

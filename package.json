@@ -5,7 +5,7 @@
   "homepage": "http://iconoteka.com",
   "dependencies": {
     "fs-extra": "^6.0.1",
-    "iconoteka-lib-test": "github:kot-lex/iconoteka-lib-test#0f783fdc9fc49d8b27a5cc2833938a43b4e9e4fa",
+    "iconoteka": "github:iconoteka/iconoteka#1f85a2379808afbe2ddc8787d75bb1dfd4239cc5",
     "node-sass": "^4.11.0",
     "prop-types": "^15.6.2",
     "react": "^16.8.6",
@@ -18,8 +18,8 @@
     "build": "REACT_APP_BASE_URL=https://iconoteka.com react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "copyIconoteka": "cpx './node_modules/iconoteka-lib-test/iconoteka/**' ./src/iconoteka/ --clean",
-    "postinstall": "npm run copyIconoteka && cd ./node_modules/iconoteka-lib-test/ && npm run prepare"
+    "copyIconoteka": "cpx './node_modules/iconoteka/iconoteka/**' ./src/iconoteka/ --clean",
+    "postinstall": "npm run copyIconoteka && cd ./node_modules/iconoteka/ && npm run prepare"
   },
   "devDependencies": {
     "cpx": "^1.5.0"
