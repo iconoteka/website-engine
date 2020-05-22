@@ -1,10 +1,9 @@
 const path = require('path');
 const config = require('./iconoteka.config.js');
 
-const craPathsPath = path.resolve("node_modules/react-scripts/config/paths.js");
-const craPaths = require(craPathsPath);
-
 const cwd = process.env.ICONOTEKA_ORIGINAL_CWD;
+const craPathsPath = path.resolve(`${cwd}/node_modules/react-scripts/config/paths.js`);
+const craPaths = require(craPathsPath);
 
 
 module.exports = {
