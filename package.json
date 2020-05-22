@@ -1,0 +1,35 @@
+{
+  "name": "@iconoteka/website-engine",
+  "version": "0.0.1",
+  "private": true,
+  "homepage": "http://iconoteka.com",
+  
+  "bin": {
+    "iconoteka": "./bin/scripts.js"
+  },
+  "dependencies": {
+    "@craco/craco": "^5.6.4",
+    "find-up": "^4.1.0",
+    "fs-extra": "^6.0.1",
+    "iconoteka": "github:iconoteka/iconoteka#1f85a2379808afbe2ddc8787d75bb1dfd4239cc5",
+    "lodash.merge": "^4.6.2",
+    "node-sass": "^4.11.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "^3.0.1",
+    "react-waypoint": "^9.0.2"
+  },
+  "scripts": {
+    "start": "craco start",
+    "build": "REACT_APP_BASE_URL=https://iconoteka.com craco build",
+    "test": "craco test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
