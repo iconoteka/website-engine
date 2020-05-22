@@ -28,7 +28,7 @@ module.exports = {
       delete webpackConfig.module.rules[2].oneOf[1].include;
 
       // Do not process node_modules by babel loader
-      webpackConfig.module.rules[2].oneOf[1].exclude = /node_modules/;
+      webpackConfig.module.rules[2].oneOf[1].exclude = /node_modules\/(?!\@iconoteka).*/;
       
       // Map components overrides to webpack aliases
       if (config.componentsOverrides) {
