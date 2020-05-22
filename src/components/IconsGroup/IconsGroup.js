@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Waypoint } from 'react-waypoint';
 
-import IconCard from '../IconCard';
-import './IconsGroup.scss';
+import IconCard from 'components/IconCard';
+import 'components/IconsGroup/IconsGroup.scss';
 
 const IconCardWithRef = React.forwardRef((props, ref) => {
   return <IconCard innerRef={ref} {...props} />;

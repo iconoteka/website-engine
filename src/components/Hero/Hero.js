@@ -1,9 +1,9 @@
 import React from 'react';
 import * as PropTypes from 'prop-types';
-import './Hero.scss';
+import 'components/Hero/Hero.scss';
 
-import Header from '../Header';
-import IconsFilter from '../IconsFilter';
+import Header from 'components/Header';
+import IconsFilter from 'components/IconsFilter';
 
 export default function Hero(props) {
   return (

@@ -4,9 +4,9 @@ import Iconoteka from 'iconoteka/iconoteka.json';
 import isPredicate from './utils/isPredicate';
 
 import './App.scss';
-import IconsGrid from './components/IconsGrid';
-import Footer from './components/Footer';
-import Hero from './components/Hero';
+import IconsGrid from 'components/IconsGrid';
+import Footer from 'components/Footer';
+import Hero from 'components/Hero';
 import AppContext from './AppContext';
 
 const baseUrl = process.env.REACT_APP_BASE_URL || 'http://localhost:3000';

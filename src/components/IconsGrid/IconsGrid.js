@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './IconsGrid.scss';
-import IconsGroup from '../IconsGroup';
+import 'components/IconsGrid/IconsGrid.scss';
+import IconsGroup from 'components/IconsGroup';
 
 export default function IconsGrid({ items, baseUrl }) {
   const newItems = items.map(

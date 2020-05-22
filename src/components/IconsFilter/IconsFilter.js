@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './IconsFilter.scss';
-import Dropdown from '../Dropdown';
+import 'components/IconsFilter/IconsFilter.scss';
+import Dropdown from 'components/Dropdown';
 import AppContext from '../../AppContext';
 
 export default class IconsFilter extends React.Component {
