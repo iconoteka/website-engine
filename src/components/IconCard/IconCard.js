@@ -8,7 +8,7 @@ const IconCard = (props) => {
     isHidden, baseUrl, name, path, forwardedRef, onClick, isVisible,
   } = props;
     // eslint-disable-next-line
-    const icon = require(`../../iconoteka/${path}`);
+    const icon = require(`iconoteka-files/${path}`);
   const iconAddress = baseUrl + icon;
 
   return !isHidden && (
