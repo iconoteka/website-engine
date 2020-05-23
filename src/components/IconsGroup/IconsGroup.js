@@ -15,6 +15,7 @@ export default function IconsGroup({ group, baseUrl }) {
   const images = group.items
     .map(iconItem => (
       <Waypoint
+        key={iconItem.fileName}
         onEnter={() => setIsVisible(true)}
       >
         <IconCardWithRef
