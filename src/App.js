@@ -76,7 +76,7 @@ class App extends Component {
     filterIconGroup(group, search, style, thickness) {
       const items = group.items && group.items
         // Filter by search string
-        .filter(iconItem => iconItem.path.includes(search.toLowerCase()))
+        .filter(iconItem => iconItem.path.toLowerCase().includes(search.toLowerCase()))
         // Filter by style
         .filter(iconItem => isPredicate(iconItem, style))
         // Filter by thickness
