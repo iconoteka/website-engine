@@ -8,15 +8,14 @@ const IconCard = (props) => {
     isHidden, baseUrl, name, path, forwardedRef, onClick, isVisible,
   } = props;
     // eslint-disable-next-line
-    const icon = require(`iconoteka-files/${path}`);
-  const iconAddress = baseUrl + icon;
+    const iconAddress = require(`iconoteka-files/${path}`);
 
   return !isHidden && (
   <div className="icon-card" onClick={onClick} ref={props.innerRef}>
 
     <div className="icon-card__content">
       {
-        isVisible && <img className="icon-card__icon" src={baseUrl + icon} alt="icon" />
+        isVisible && <img className="icon-card__icon" src={iconAddress} alt="icon" />
       }
       <span className="icon-card__title">{name}</span>
       <a className="icon-card__download" ref={forwardedRef} download={path} href={iconAddress}>Download</a>
