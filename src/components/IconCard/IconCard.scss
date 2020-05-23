@@ -21,7 +21,9 @@
   }
   &__title {
     display: block;
-    height: 32px;
+    height: 39px;
+    overflow: hidden;
+    text-overflow: ellipsis;
     color: #BCBBBF;
     margin-top: 14px;
     font-size: 15px;
