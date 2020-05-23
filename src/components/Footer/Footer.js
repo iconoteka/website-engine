@@ -1,5 +1,6 @@
 import React from 'react';
 
+// eslint-disable-next-line no-unused-vars
 import { styles, FooterLinks, FooterCopy } from '.';
 
 export default function Footer() {

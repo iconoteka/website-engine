@@ -5,7 +5,7 @@ import './IconCard.scss';
 
 const IconCard = (props) => {
   const {
-    isHidden, baseUrl, name, path, forwardedRef, onClick, isVisible,
+    isHidden, name, path, forwardedRef, onClick, isVisible,
   } = props;
     // eslint-disable-next-line
     const iconAddress = require(`iconoteka-files/${path}`);
