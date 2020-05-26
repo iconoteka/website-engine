@@ -2,7 +2,7 @@
   "name": "@iconoteka/website-engine",
   "version": "0.0.2",
   "private": true,
-  "homepage": "http://iconoteka.com",
+  "homepage": ".",
   "bin": {
     "iconoteka": "./bin/scripts.js"
   },
