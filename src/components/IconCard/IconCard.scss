@@ -1,4 +1,4 @@
-@import "../../common-styles/index.scss";
+@import "common-styles/index.scss";
 
 .icon-card {
   position: relative;
@@ -7,16 +7,16 @@
 
   &__content {
     position: relative;
-    width: 136px;
-    height: 133px;
+    width: 88+$icon-size;
+    height: 85+$icon-size;
     padding-left: 2px;
     padding-right: 2px;
     padding-top: 28px;
   }
   &__icon {
     display: block;
-    width: 48px;
-    height: 48px;
+    width: $icon-size;
+    height: $icon-size;
     margin: 0 auto;
     object-fit: contain;
   }
@@ -50,7 +50,7 @@
   cursor: pointer;
 
   .icon-card__content {
-    height: 162px;
+    height: 114+$icon-size;
     padding-bottom: 29px;
     box-shadow: 0 0 1px 1px rgba(0,0,0,0.04), 0 3px 6px 0 rgba(6,0,0,0.08);
   }

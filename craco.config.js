@@ -36,6 +36,17 @@ module.exports = {
           webpackConfig.resolve.alias[`components/${componentName}`] = config.componentsOverrides[componentName];
         });
       }
+      
+      // Map common styles overrides to webpack aliases
+      if (config.commonStyles) {
+        Object.keys(config.commonStyles).forEach(fileName => {
+          webpackConfig.resolve.alias[`common-styles/${fileName}`] = config.commonStyles[fileName];
+        });
+      }
+
+      // Set base common-styles alias (must come after custom overrides)
+      webpackConfig.resolve.alias['common-styles'] = path.join(__dirname, 'src', 'common-styles');
+
       // Set iconoteka.json alias
       webpackConfig.resolve.alias['iconoteka.json'] = config.iconotekaJson;
 
