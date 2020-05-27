@@ -17,13 +17,9 @@ const Figma = require('figma-js');
 const slugify = require('@sindresorhus/slugify');
 const mkdirp = require('mkdirp');
 const ProgressBar = require('progress');
-const findUp = require('find-up');
 const { default: PQueue } = require('p-queue');
 
-const configPath = findUp.sync('iconoteka.config.js', {
-    cwd: path.resolve(path.join(__dirname, '../../'))
-});
-const config = require(configPath);
+const config = require('../iconoteka.config');
 
 console.log(`Downloading from Figma: using config "${configPath}" `);
 
