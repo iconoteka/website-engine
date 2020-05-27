@@ -1,5 +1,5 @@
 const path = require('path');
-const cwd = process.env.ICONOTEKA_ORIGINAL_CWD || process.cwd();
+const cwd = process.env.ICONOTEKA_ORIGINAL_CWD || process.env.INIT_CWD;
 const config = {
     cwd,
     componentsOverrides: 
