@@ -46,7 +46,7 @@ const fileFormat = config.figma.format || 'svg';
 const scale = config.figma.scale || '1'; 
 const chunkSize = config.figma.requestChunkSize || 500; // In order to avoid 500 and 414 errors from Figma we split requests into several chunks 
 
-const targetDirAssets = config.figma.targetDir || `${process.cwd()}/iconoteka`;
+const targetDirAssets = config.figma.targetDir || config.iconotekaFilesPath;
 const cleanTargetDir = config.figma.cleanTargetDir || true;
 
 if (cleanTargetDir) {
