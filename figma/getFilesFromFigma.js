@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const rimraf = require('rimraf');
 const nodeFetch = require('node-fetch');
 let globalRetryCount = 0;
 
@@ -52,6 +53,11 @@ const scale = config.figma.scale || '1';
 const chunkSize = config.figma.requestChunkSize || 500; // In order to avoid 500 and 414 errors from Figma we split requests into several chunks 
 
 const targetDirAssets = config.figma.targetDir || `${process.cwd()}/iconoteka`;
+const cleanTargetDir = config.figma.cleanTargetDir || true;
+
+if (cleanTargetDir) {
+    rimraf.sync(`${targetDirAssets}/**`);
+}
 
 const getStartNode = (file, nodeId) => {
 
