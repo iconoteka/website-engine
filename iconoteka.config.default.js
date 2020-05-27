@@ -5,8 +5,8 @@ const config = {
         {
             
         },
-    iconotekaJson: 'iconoteka/iconoteka.json',
-    iconotekaFilesPath: path.join(__dirname, 'public', 'iconoteka')
+    iconotekaJson: path.join(process.cwd(), 'iconoteka', 'iconoteka.json'),
+    iconotekaFilesPath: path.join(process.cwd(), 'iconoteka')
 };
 
 module.exports = config;
