@@ -15,14 +15,13 @@ export default function IconsGroup({ group, baseUrl }) {
   const images = group.items
     .map(iconItem => (
       <Waypoint
-        key={iconItem.fileName}
+        key={iconItem.path}
         onEnter={() => setIsVisible(true)}
       >
         <IconCardWithRef
-          key={iconItem.fileName}
+          key={iconItem.path}
           path={iconItem.path}
           name={iconItem.name}
-          fileName={iconItem.fileName}
           isHidden={iconItem.isHidden}
           baseUrl={baseUrl}
           isVisible={isVisible}
