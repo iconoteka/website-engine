@@ -1,8 +1,7 @@
 const path = require('path');
 const config = require('./iconoteka.config.js');
 
-const cwd = process.env.ICONOTEKA_ORIGINAL_CWD;
-const craPathsPath = path.resolve(`${cwd}/node_modules/react-scripts/config/paths.js`);
+const craPathsPath = path.resolve(`${config.cwd}/node_modules/react-scripts/config/paths.js`);
 const craPaths = require(craPathsPath);
 
 
@@ -12,7 +11,7 @@ module.exports = {
 
       // Set correct output dir 
       // Note that we have to override cra paths in order to get successful build
-      craPaths.appBuild = path.join(cwd, 'build');
+      craPaths.appBuild = path.join(config.cwd, 'build');
       webpackConfig.output.path = craPaths.appBuild
       require.cache[craPathsPath].exports = craPaths;
 
