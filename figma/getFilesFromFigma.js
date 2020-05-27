@@ -21,8 +21,6 @@ const { default: PQueue } = require('p-queue');
 
 const config = require('../iconoteka.config');
 
-console.log(`Downloading from Figma: using config "${configPath}" `);
-
 if (!config) {
     console.error('Cant find iconoteka.config.js');
     process.exit(1);
