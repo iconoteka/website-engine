@@ -4,6 +4,9 @@ const config = require('./iconoteka.config.js');
 const craPathsPath = path.resolve(`${config.cwd}/node_modules/react-scripts/config/paths.js`);
 const craPaths = require(craPathsPath);
 
+if (config.googleAnalyticsId) {
+  process.env.REACT_APP_GA = config.googleAnalyticsId;
+}
 
 module.exports = {
   webpack: {
