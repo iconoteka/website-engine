@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import _debounce from 'lodash.debounce';
+
 import Iconoteka from 'iconoteka.json';
 
 import isPredicate from './utils/isPredicate';
@@ -32,10 +34,24 @@ class App extends Component {
       this.filterIcons();
     }
 
+    sendSearchToGA(search) {
+      if (search === '') {
+        return; 
+      }
+      // eslint-disable-next-line no-undef
+      ga('send', 'pageview', `/search?q=${search}`);
+    }
+
+    sendSearchToGADebounced = _debounce(this.sendSearchToGA, 3000)
+
     onSearch(event) {
       this.setState({
         search: event.target.value,
       });
+      if(process.env.REACT_APP_GA) {
+
+        this.sendSearchToGADebounced(event.target.value);
+      }
 
       const { style, thickness } = this.state;
       this.filterIcons(event.target.value, style, thickness);
