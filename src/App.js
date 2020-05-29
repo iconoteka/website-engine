@@ -39,7 +39,8 @@ class App extends Component {
         return; 
       }
       // eslint-disable-next-line no-undef
-      ga('send', 'pageview', `/search?q=${search}`);
+      gtag('config', process.env.REACT_APP_GA, {'page_path': `/search?q=${search}`});
+
     }
 
     sendSearchToGADebounced = _debounce(this.sendSearchToGA, 3000)
