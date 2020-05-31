@@ -25,6 +25,7 @@ export default function IconsGroup({ group, baseUrl }) {
           isHidden={iconItem.isHidden}
           baseUrl={baseUrl}
           isVisible={isVisible}
+          groupName={group.name}
         />
       </Waypoint>
     ));

@@ -10,14 +10,25 @@ export default class IconCardContainer extends React.Component {
   }
 
   cardClick(event) {
-    // eslint-disable-next-line no-undef
-    ga('send', 'event', {
-      eventCategory: 'Download Icon',
-      eventAction: 'click',
-      eventLabel: event.target.href,
-    });
+    const isClickOnLink = event.target.tagName.toLocaleLowerCase() === 'a';
 
-    if (event.target.tagName.toLocaleLowerCase() === 'a') {
+    if(isClickOnLink && process.env.REACT_APP_GA) {
+      console.log(this.props.path, this.props.groupName, this.props.name);
+      // Track icon download as page view
+      // eslint-disable-next-line no-undef
+      gtag('config', process.env.REACT_APP_GA, {
+        'page_path': `/${this.props.path}`
+      });
+
+      // eslint-disable-next-line no-undef
+      gtag('event', 'Icon Download', {
+        'event_category': this.props.groupName,
+        'event_label': this.props.name,
+      });
+
+    }
+
+    if (isClickOnLink) {
       return;
     }
 
