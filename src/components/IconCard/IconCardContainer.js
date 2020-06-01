@@ -13,7 +13,6 @@ export default class IconCardContainer extends React.Component {
     const isClickOnLink = event.target.tagName.toLocaleLowerCase() === 'a';
 
     if(isClickOnLink && process.env.REACT_APP_GA) {
-      console.log(this.props.path, this.props.groupName, this.props.name);
       // Track icon download as page view
       // eslint-disable-next-line no-undef
       gtag('config', process.env.REACT_APP_GA, {
