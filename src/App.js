@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import _debounce from 'lodash.debounce';
+import * as JsSearch from 'js-search';
+import { stemmer } from 'porter-stemmer';
 
 import Iconoteka from 'iconoteka.json';
 
@@ -92,15 +94,35 @@ class App extends Component {
     /* eslint-disable */
     filterIconGroup(group, search, style, thickness) {
       const items = group.items && group.items
-        // Filter by search string
-        .filter(iconItem => iconItem.path.toLowerCase().includes(search.toLowerCase()))
         // Filter by style
         .filter(iconItem => isPredicate(iconItem, style))
         // Filter by thickness
-        .filter(iconItem => isPredicate(iconItem, thickness));
+        .filter(iconItem => isPredicate(iconItem, thickness))
+        // Add group name to allow searching
+        .map(item => {
+          item.groupName = group.name;
+          return item;
+        });
+        ;
 
+      let results = items;
+      if (search.trim() !== '') {
+        const searchEngine = new JsSearch.Search('name');
+        searchEngine.tokenizer =
+	        new JsSearch.StemmingTokenizer(
+            stemmer,
+            new JsSearch.SimpleTokenizer()
+          );
+
+        searchEngine.addIndex('name');
+        searchEngine.addIndex('groupName');
+        searchEngine.addDocuments(items); 
+        results = searchEngine.search(search);
+        
+      }
+    
       return Object.assign({}, group, {
-        items,
+        items: results,
       });
     }
     /* eslint-enable */
