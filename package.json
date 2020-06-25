@@ -3,6 +3,7 @@
   "version": "0.0.3",
   "private": true,
   "homepage": ".",
+  "license": "MIT",
   "bin": {
     "iconoteka": "./bin/scripts.js"
   },
