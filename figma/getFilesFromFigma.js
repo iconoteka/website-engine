@@ -120,7 +120,7 @@ async function main() {
 
         const items = [];
 
-        container.children.forEach(item => {
+        container.children.reverse().forEach(item => {
             const containerName = parentContainerName 
                 ? `${parentContainerName} / ${container.name}`
                 : container.name;
@@ -143,7 +143,7 @@ async function main() {
     const items = [];
 
     console.log('StartNode', startNode.name, startNode.id);
-    startNode.children.forEach(child => {
+    startNode.children.reverse().forEach(child => {
         
         const components = getComponentsFlat(child);
         items.push(...components);
