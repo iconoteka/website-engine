@@ -10,6 +10,7 @@
   "dependencies": {
     "@craco/craco": "^5.6.4",
     "@sindresorhus/slugify": "^1.0.0",
+    "cpx": "^1.5.0",
     "fetch-retry": "^3.1.0",
     "figma-js": "^1.10.1",
     "find-up": "^4.1.0",
@@ -18,7 +19,7 @@
     "lodash.debounce": "^4.0.8",
     "lodash.merge": "^4.6.2",
     "mkdirp": "^1.0.4",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "node-sass": "^4.11.0",
     "p-queue": "^6.4.0",
     "porter-stemmer": "^0.9.1",
@@ -26,7 +27,7 @@
     "prop-types": "^15.6.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "^3.0.1",
+    "react-scripts": "^3.4.3",
     "react-waypoint": "^9.0.2",
     "rimraf": "^3.0.2"
   },
@@ -35,7 +36,9 @@
     "build": "craco build",
     "test": "craco test --env=jsdom",
     "eject": "react-scripts eject",
-    "postinstall": "node ./figma/getFilesFromFigma.js"
+    "getFigma": "node ./figma/getFilesFromFigma.js",
+    "copyPublic": "node ./copyPublicFiles.js",
+    "postinstall": "npm run copyPublic && npm run getFigma"
   },
   "browserslist": [
     ">0.2%",
