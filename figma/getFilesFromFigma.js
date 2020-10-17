@@ -87,7 +87,8 @@ const fillItemProps = item => {
         isRegular: true,
         isLight: true,
         name: item.name,
-        path: item.fileName
+        path: item.fileName,
+        keywords: [],
       }
 }
 
