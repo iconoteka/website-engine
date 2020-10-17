@@ -116,6 +116,7 @@ class App extends Component {
 
         searchEngine.addIndex('name');
         searchEngine.addIndex('groupName');
+        searchEngine.addIndex('keywords');
         searchEngine.addDocuments(items); 
         results = searchEngine.search(search);
         
