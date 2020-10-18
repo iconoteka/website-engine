@@ -36,8 +36,10 @@
     "build": "craco build",
     "test": "craco test --env=jsdom",
     "eject": "react-scripts eject",
-    "postinstall": "node ./figma/getFilesFromFigma.js"
-  },
+    "getFigma": "node ./figma/getFilesFromFigma.js",
+    "copyPublic": "node ./copyPublicFiles.js",
+    "postinstall": "npm run copyPublic && node ./figma/getFilesFromFigma.js"  
+},
   "browserslist": [
     ">0.2%",
     "not dead",

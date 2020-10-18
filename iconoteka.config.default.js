@@ -6,6 +6,7 @@ const config = {
         {
             
         },
+    publicFiles: [],
     iconotekaJson: path.join(cwd, 'iconoteka', 'iconoteka.json'),
     iconotekaFilesPath: path.join(cwd, 'iconoteka')
 };
