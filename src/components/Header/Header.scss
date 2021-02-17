@@ -6,6 +6,10 @@
   display: flex;
   justify-content: space-between;
 
+  &__logo {
+    width: 148px;
+  }
+  
   &__menu {
     display: flex;
     padding: 1px 0 0;
