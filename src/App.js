@@ -74,7 +74,7 @@ class App extends Component {
       this.filterIcons(search, style, thickness.key);
     }
 
-    filterIcons(search = '', style = 'fill', thickness = 'regular') {
+    filterIcons(search = '', style = 'stroke', thickness = 'bold') {
       const { Iconoteka: iconoteka } = this.state;
       const filteredGroups = iconoteka.items
         .map(
