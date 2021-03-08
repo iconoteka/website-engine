@@ -19,8 +19,8 @@ class App extends Component {
     state = {
       Iconoteka,
       filteredItems: Iconoteka.items,
-      style: 'fill',
-      thickness: 'regular',
+      style: 'stroke',
+      thickness: 'bold',
       search: '',
     };
 
