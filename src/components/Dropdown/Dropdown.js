@@ -55,7 +55,7 @@ class Dropdown extends Component {
     const label = this.state.selected.title;
     return (
       <div ref={this.ref} className="icons-filter__control">
-        <a className="icons-filter__style-item-name" href="#regular">{label}</a>
+        <a className="icons-filter__style-item-name" href="#">{label}</a>
         <ul className="icons-filter__dropdown" style={this.props.openDropdown === this.props.name ? { display: 'block' } : {}}>
           { this.props.items.map(item => <li key={item.key} data-key={item.key} onClick={() => this.onItemSelect(item)}>{item.title}</li>) }
         </ul>
