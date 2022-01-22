@@ -19,7 +19,7 @@
     "lodash.debounce": "^4.0.8",
     "lodash.merge": "^4.6.2",
     "mkdirp": "^1.0.4",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^3.1.1",
     "node-sass": "^4.11.0",
     "p-queue": "^6.4.0",
     "porter-stemmer": "^0.9.1",
