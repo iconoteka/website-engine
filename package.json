@@ -20,7 +20,7 @@
     "lodash.merge": "^4.6.2",
     "mkdirp": "^1.0.4",
     "node-fetch": "^2.6.1",
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "p-queue": "^6.4.0",
     "porter-stemmer": "^0.9.1",
     "progress": "^2.0.3",
